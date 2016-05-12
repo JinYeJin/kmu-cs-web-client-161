@@ -1,8 +1,55 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+
 <html>
 <head>
   <title>navigation bar</title>
-  <meta charset="utf-8">
+  
+  <style>
+  @CHARSET "UTF-8";
+@font-face {
+
+    font-family:'NanumGothic';
+
+    src: url('fonts/NanumGothic/NanumGothic-Regular.eot');
+
+    src: url('fonts/NanumGothic/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),
+
+         url('fonts/NanumGothic/NanumGothic-Regular.woff') format('woff'),
+
+         url('fonts/NanumGothic/NanumGothic-Regular.ttf') format('truetype');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+body {
+	background-image: url("nav-bar-bg.png");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 140px;
+}
+ul {
+	list-style-type: none;
+}
+li {
+	display: inline;
+	font-family: 'NanumGothic' Serif;
+}
+li a {
+	text-decoration: none;
+	font-size: 20px;
+	color: #483535;
+	padding: 15px 10px;
+}
+li a:hover {
+	text-decoration: underline;
+	color: FireBrick;
+	background-image: url("hover-icon.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+</style>
 </head>
 <body>
   <ul>

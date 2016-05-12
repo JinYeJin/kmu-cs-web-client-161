@@ -1,0 +1,27 @@
+table, th, td {
+	border:1px solid pink;
+}
+table {
+	border-collapse:collapse;
+	width:100%;
+}
+th {
+	text-align: left;
+	height: 40px;
+	background-color:Orchid;
+	color:white;
+}
+th:hover {
+	background-color:Khaki;
+}
+tr:nth-child(even) {
+	background-color:FloralWhite;
+}
+td {
+	text-align: center;
+	height: 40px;
+	color:IndianRed;
+}
+td:hover {
+	background-color:MistyRose;
+}

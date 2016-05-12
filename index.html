@@ -1,34 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
+	<meta charset="UTF-8">
     <title>The real first homework</title>
+	<style>
+		.a {font-family: cursive;}
+		div>p{
+		  background-color:yellow;
+		}
+	</style>
   </head>
-  <body>
-    <p style="font-size:200%;" id="kmu-id">KMU ID:</p>
-    <p style="font-size:200%;">Name:</p>
+  <body style = "padding : 20px">
+    <p style="font-size:200%;" id="kmu-id">KMU ID:20153236</p>
+    <p style="font-size:200%;">Name:진예진</p>
     <p style="font-size:150%;">This homework helps you to apply CSS skills that you learned during the class with pratical problem sets. The answer should be written in a valid HTML and CSS form that should be rendered in <strong>Chrome</strong> browser. You can write answers in Korean. <strong>The score for this homework will take twice more portion than the first homework</strong>. If you have difficulties in understanding the question, please let me know. <a href = "kmu-cs-web-client- 161.slack.com">Slack</a> or <a href="mailto:leeky@kookmin.ac.kr">E-mail</a> <br>This homework has to be submitted by <time datetime="2016-04-21T16:30">April 21st. class time</time>, and the solution will be provided during the class. No late submission is allowed this time due to the midterm.</p>
     <h1>Understanding CSS Concepts</h1>
     <ol>
       <li>Describe difference between HTML and CSS with respect to the <em>roles</em> they take in a web page? (5 point)</li>
-      <div>Answer:
-      </div>
-      <li>CSS stands for Cascading Style Sheet, what does <em>Cascading</em> means? (5 point)</li>
+      <div>Answer:html은 홈페이지에 기본이 되는 토대를 만들고, css는 그 위에 글꼴, 색상 등 여러 스타일을 입힌다. 물론 html로도 이 기능을 할 순 있지만, css로 관리하는 것이 더 편리하다.
+					css는 Cascading Style Sheets의 약자로써 말 그대로 html로 작성된 뼈대에 스타일을 더해준다. external이 많은 양의 파일을 일괄적으로 바꿀 때 편리하다.</div><br>
+
+      <li>CSS stands for Cascading Style Sheet, what does <em>Cascading</em> means? (5 point)<br>
+
+		CSS의 스타일 속성들이 DOM문서 트리의 상위 속성들로부터 하위 속성들로 상속되는 모습이 연속적으로 흘러내리는 모습과 비슷하여 cascading을 이름에 붙였다.</li><br>
       <li>List <em>three different methods</em> to use CSS with a HTML document and write a brief decription how to use it(5 point)</li>
-      <div>Answer:
-      </div>
+      <div>Answer:스타일링을 하는 데에는 세가지 방법이 있다.
+			<xmp>
+			inline:html 파일에 line by line으로 스타일을 적용시킴
+			internal:html파일의 <head>에 <style>element를 사용해 적용시킴
+			external:css파일을 별도로 만들어 <head>에 <link>를 사용해 적용시킴
+			</xmp>
+      </div><br>
+
       <li>For the three different methods discussed at the previous problem, describe pros and cons (advantage and disadvantages) of them comparing with others(10 point)</li>
       <div>Answer:
+		<ul><b>inline</b>
+			<li>장점: 보기에 직관적이다.</li>
+			<li>단점: 스타일을 적용하고 싶은 라인마다 일일이 지정해 주어야 하는 불편이 있다.</li>			
+		</ul>
+		<ul><b>internal</b>
+			<li>장점: 한 문서에만 해당되는 스타일을 지정할 때 간단하게 지정해 줄 수 있다.</li>
+			<li>단점: 스타일을 쓸 때 문서마다 계속 적용해주어야 한다.</li>
+		</ul>
+		<ul><b>external</b>
+			<li>장점: CSS파일 하나면 변경하면 일괄적으로 변경이 되기 때문에 홈페이지 제작의 효율성을 극대화 할 수 있다.</li>
+			<li>단점: CSS파일을 지속적으로 관리하는 데에 노력이 필요하다.</li>
+		</ul><br>
+
       </div>
       <li>When we want to set font style using CSS, we can set generic family and font family. What are the difference between them?(5 point) Which one is recommended to state as a last option to show in a web-page? (5 point)</li>
       <div>Answer:
-      </div>
+		<ul>
+			<li><b>generic-family</b> - 모양이 비슷한 글꼴들의 집합의 이름 The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".</li>
+			<li><b>family-name</b> - 글꼴 자체의 이름 The name of a font-family, like "times", "courier", "arial", etc.</li>
+		<ul>
+	<p class="a">두개를 혼용해서 쓰지만, 어느 하나를 정하라고 한다면 제네릭을 사용해야한다. 왜냐하면, font-family는 하나의 글꼴만을 선택하지만, generic-family는 그 글꼴이 포함된 집합 전체를 나타내기 때문이다. 이러한 형식으로 사용하면 된다.</p>
+      </div><br>
+
       <li>When we want to control space of an element, we can use <em>padding</em> and <em>margin</em>. What are the difference between them?(5 point)</li>
-      <div>Answer:
-      </div>
+      <div>Answer:padding과 margin 둘 다 여백을 설정하는 속성이지만, margin은 바깥쪽의 여백을 정해주고, padding은 안쪽의 여백을 지정해준다.
+      </div><br>
+
       <li>When we set font size using CSS, we can use units of <em>em, %, px</em>. How are they different? (5 point)</li>
-      <div>Answer:
-      </div>
+      <div>Answer: 
+			셋 다 사이즈를 지정해 주지만, pixel은 절대적인 값이 지정되어 있어서 페이지를 확대시키거나 컴퓨터 이외의 다른 디바이스에서 볼 때 사이즈가 변하지 않는다. 
+			이에 반해 em과 %는 유동적으로 사이즈가 조절된다. em 과 %의 차이는 거의 없어보이지만, 일부 브라우저에서 텍스트 크기 자체를 조절했을 때, em의 크기 편차가 심히다. 
+			그래서 CSS의 기본글꼴은 %로 설정하는 게 좋다.
+      </div><br>
+
       <li>There are four ways to set conditional property for a sequence of elements (parent-child, siblings) - we called it as <em>Combinator</em> in the class. Describe the name of the four combinators with brief descripton and give a short example (10 point)</li>
+	  <div>Answer:
+			<ul type="circle">
+			<li>Descendant selector: 포함관계를 가지는 구조에서 하위에 있는 모든 요소에 스타일을 적용한다. </li>
+			<li>Child selector: 하위에 있는 요소중에 부모 바로 아래의 자식요소에만 적용된다.</li>
+			<li>Adjacent sibling: 같은 계층에 있는 요소중에서 뒤따르는 요소를 선택한다.</li>
+			<li>General sibling: 같은 계층에 있는 요소중에서 조건을 충족하는 모든 동생요소에 스타일을 적용한다.</li>
+			</ul>
+	  </div>
+	  <div>
+	  <br>
+	  it's a example of <b>Child</b>
+	    <p>Paragraph 1 in the div.</p>
+		<p>Paragraph 2 in the div.</p>
+		<span><p>Paragraph 3 in the div.</p></span>
+	  </div>
+	  <p>Paragraph 4. Not in a div.</p>
+	  <p>Paragraph 5. Not in a div.</p>
     </ol>
 
     <h1>Make an aesthetic web page using CSS</h1>
